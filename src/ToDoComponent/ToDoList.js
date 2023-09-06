@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import {ToDoHeader} from "./ToDoHeader";
 import {ToDoAdd} from "./ToDoAdd";
-import './ToDo.css'
 import {ToDoItems} from "./ToDoItems";
+import './ToDo.css'
 
 // Общая компонента - Список дел. Состоит из заголовка, добавления нового и списка дел
 export const ToDoList = ()=>{
@@ -17,7 +17,7 @@ export const ToDoList = ()=>{
     const dropTodo = (id) => {
         setTodos(todos.filter(todo => todo.id !== id))
     }
-    return <div name="todolist" className="list">
+    return <div name="todolist">
         <ToDoHeader title="ToDo list"/>
         <ToDoAdd addTodo={addTodo}/>
         <ToDoItems listTodo={todos}
