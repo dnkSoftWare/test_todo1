@@ -1,0 +1,15 @@
+.list  {
+    vertical-align: top;
+}
+.todo_header {
+    margin-bottom: 5px;
+}
+
+.todo_item {
+    display: flex;
+    flex-direction: row;
+}
+
+.completed {
+    text-decoration: line-through ;
+}
