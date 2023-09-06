@@ -1,5 +1,7 @@
 .list  {
     vertical-align: top;
+    display: flex;
+    flex-direction: column;
 }
 .todo_header {
     margin-bottom: 5px;
@@ -8,8 +10,39 @@
 .todo_item {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+
+}
+.item_text {
+    align-self: self-start;
+    flex: 1;
 }
 
 .completed {
-    text-decoration: line-through ;
+    text-decoration: line-through;
+    align-self: self-start;
+    flex: 1;
+    display: flex;
+}
+.uncompleted {
+    display: flex;
+}
+p {
+    margin: 0;
+    display: flex;
+}
+
+.addItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+.addItemInput {
+    padding: 8px;
+    margin-right: 10px;
+}
+button {
+    padding: 10px;
+    min-width: 80px;
 }

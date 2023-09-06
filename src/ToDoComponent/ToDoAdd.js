@@ -9,10 +9,11 @@ export const ToDoAdd = ({addTodo}) => {
         addTodo(value);
         setValue("")
     }
-  return <div>
+  return <div className="addItem">
     <form onSubmit={handle_submit}>
         <input type="text"
                name="name_todo"
+               className="addItemInput"
                placeholder="add new todo"
                value={value}
                onChange={e => setValue(e.target.value)}
