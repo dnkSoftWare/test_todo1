@@ -9,7 +9,7 @@ export const ToDoList = ()=>{
     const [todos, setTodos] = useState([])
     const addTodo = (todo) => {
       setTodos([...todos,{id:Date.now(), name: todo, completed: false }]);
-      console.log(todos)
+      //console.log(todos)
     }
     const toggleComplete = (id) => {
         setTodos(todos.map(todo => todo.id === id ? {...todo, completed: !todo.completed } : todo))
