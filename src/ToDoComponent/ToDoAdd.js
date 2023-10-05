@@ -2,7 +2,6 @@ import React, {useState, useRef} from "react";
 
 // Компонента - Добавления дела
 export const ToDoAdd = ({addTodo}) => {
-    const [value, setValue] = useState("")
     const newToDoRef = useRef(null);
     const handle_submit = (x) => {
         x.preventDefault();
@@ -10,8 +9,6 @@ export const ToDoAdd = ({addTodo}) => {
         addTodo(newToDoRef.current.value);
         newToDoRef.current.value = ``;
         newToDoRef.current.focus();
-        // addTodo(value);
-        // setValue("")
     }
   return <div className="addItem">
     <form onSubmit={handle_submit}>
