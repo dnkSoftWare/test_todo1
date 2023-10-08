@@ -7,6 +7,7 @@ import './ToDo.css'
 // Общая компонента - Список дел. Состоит из заголовка, добавления нового и списка дел
 export const ToDoList = ()=>{
     const [todos, setTodos] = useState([])
+    // const [id, setId] = useState(1);
     const addTodo = (todo) => {
       setTodos([...todos,{id:Date.now(), name: todo, completed: false }]);
       //console.log(todos)
@@ -19,7 +20,7 @@ export const ToDoList = ()=>{
     }
     return <div name="todolist">
         <ToDoHeader title="ToDo list"/>
-        <ToDoAdd addTodo={addTodo}/>
+        <ToDoAdd addTodoProp={addTodo}/>
         <ToDoItems listTodo={todos}
                    toggleComplete={toggleComplete}
                    dropTodo = {dropTodo}

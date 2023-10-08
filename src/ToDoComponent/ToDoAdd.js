@@ -1,12 +1,12 @@
 import React, {useState, useRef} from "react";
 
 // Компонента - Добавления дела
-export const ToDoAdd = ({addTodo}) => {
+export const ToDoAdd = ({addTodoProp}) => {
     const newToDoRef = useRef(null);
     const handle_submit = (x) => {
         x.preventDefault();
         // setValue();
-        addTodo(newToDoRef.current.value);
+        addTodoProp(newToDoRef.current.value);
         newToDoRef.current.value = ``;
         newToDoRef.current.focus();
     }
